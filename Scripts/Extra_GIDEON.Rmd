@@ -1,0 +1,63 @@
+---
+title: "GIDEON data"
+output: html_document
+---
+
+## Introduction
+
+This script showcases a sample of GIDEON outbreaks. The dataset used in this example was retrieved through the GIDEON API, which provides information on outbreaks, including their coordinates. GIDEON provides several datasets, and in this sample, we have joined the main dataset containing the outbreak information with the endemic dataset to be able to define whether a disease is endemic in a country or not. Additionally, the disease code and country code are provided in a separate file.
+
+## Dataset
+
+```{r, message=FALSE}
+# Load the required libraries
+source("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Scripts/01_Load_packages.R")
+
+# Load the GIDEON data
+data <- read.csv("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/Outbreaks/GIDEONSample.csv")
+
+# Display column names
+colnames(data)
+
+```
+
+The GIDEON dataset is loaded from a CSV file. This dataset contains information on outbreaks, including the following columns:
+
+-   outbreak_start: The start date of the outbreak
+-   outbreak_end: The end date of the outbreak
+-   publication_year: The year the outbreak was published
+-   region: The region where the outbreak occurred
+-   vehicle: The vehicle or mode of transmission of the outbreak
+-   setting: The setting of the outbreak (e.g. hospital, community)
+-   population: The population affected by the outbreak
+-   cases: The number of cases reported
+-   deaths: The number of deaths reported
+-   animalpopulation: The animal population affected by the outbreak
+-   animalcases: The number of animal cases reported
+-   animaldeaths: The number of animal deaths reported
+-   pathogen: The pathogen causing the outbreak
+-   clinical: Clinical information about the outbreak
+-   notes: Additional notes about the outbreak
+-   references: References to the outbreak
+-   state: The state where the outbreak occurred
+-   city: The city where the outbreak occurred
+-   country_code: A unique code for the country
+-   disease_code: A unique code for the disease
+-   disease: The disease causing the outbreak
+-   country: The country where the outbreak occurred
+-   x and y: The coordinates of the outbreak
+-   is_endemic: A flag indicating whether the disease is endemic in the country
+
+# Sample
+
+```{r}
+data |> 
+  select(outbreak_start, setting, population, cases, notes, disease, country, country_code, is_endemic) |> 
+  kable() |> 
+  kable_classic(full_width = F, html_font = "Cambria")
+
+```
+
+## Notes
+
+The GIDEON dataset was retrieved through the API provided by GIDEON. For more information about GIDEON, visit their website: <https://www.gideononline.com/>.

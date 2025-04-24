@@ -1,0 +1,194 @@
+"","SpatialDimValueCode","Location","mean","median"
+"1","AFG","Afghanistan",80,80
+"2","AGO","Angola",86.6666666666667,80
+"3","ALB","Albania",80,80
+"4","AND","Andorra",60,60
+"5","ARE","United Arab Emirates",100,100
+"6","ARG","Argentina",73.3333333333333,80
+"7","ARM","Armenia",100,100
+"8","ATG","Antigua and Barbuda",20,20
+"9","AUS","Australia",46.6666666666667,60
+"10","AUT","Austria",100,100
+"11","AZE","Azerbaijan",80,80
+"12","BDI","Burundi",46.6666666666667,60
+"13","BEL","Belgium",100,100
+"14","BEN","Benin",20,20
+"15","BFA","Burkina Faso",53.3333333333333,40
+"16","BGD","Bangladesh",80,80
+"17","BGR","Bulgaria",80,80
+"18","BHR","Bahrain",90,90
+"19","BHS","Bahamas",53.3333333333333,80
+"20","BIH","Bosnia and Herzegovina",20,20
+"21","BLR","Belarus",80,80
+"22","BLZ","Belize",30,30
+"23","BOL","Bolivia (Plurinational State of)",80,80
+"24","BRA","Brazil",93.3333333333333,100
+"25","BRB","Barbados",40,40
+"26","BTN","Bhutan",80,80
+"27","BWA","Botswana",20,20
+"28","CAF","Central African Republic",20,20
+"29","CAN","Canada",100,100
+"30","CHE","Switzerland",100,100
+"31","CHL","Chile",86.6666666666667,80
+"32","CHN","China",100,100
+"33","CIV","Côte d’Ivoire",60,60
+"34","CMR","Cameroon",73.3333333333333,80
+"35","COD","Democratic Republic of the Congo",60,60
+"36","COG","Congo",26.6666666666667,20
+"37","COK","Cook Islands",20,20
+"38","COL","Colombia",80,80
+"39","COM","Comoros",53.3333333333333,60
+"40","CPV","Cabo Verde",46.6666666666667,40
+"41","CRI","Costa Rica",73.3333333333333,80
+"42","CUB","Cuba",80,80
+"43","CYP","Cyprus",73.3333333333333,80
+"44","CZE","Czechia",80,80
+"45","DEU","Germany",100,100
+"46","DJI","Djibouti",40,40
+"47","DMA","Dominica",80,80
+"48","DNK","Denmark",100,100
+"49","DOM","Dominican Republic",40,40
+"50","DZA","Algeria",80,80
+"51","ECU","Ecuador",80,80
+"52","EGY","Egypt",80,80
+"53","ERI","Eritrea",60,80
+"54","ESP","Spain",80,80
+"55","EST","Estonia",80,80
+"56","ETH","Ethiopia",53.3333333333333,60
+"57","FIN","Finland",100,100
+"58","FJI","Fiji",60,60
+"59","FRA","France",80,80
+"60","FSM","Micronesia (Federated States of)",20,20
+"61","GAB","Gabon",46.6666666666667,20
+"62","GBR","United Kingdom of Great Britain and Northern Ireland",100,100
+"63","GEO","Georgia",80,80
+"64","GHA","Ghana",60,60
+"65","GIN","Guinea",66.6666666666667,60
+"66","GMB","Gambia",20,20
+"67","GNB","Guinea-Bissau",46.6666666666667,40
+"68","GNQ","Equatorial Guinea",20,20
+"69","GRC","Greece",60,60
+"70","GTM","Guatemala",46.6666666666667,40
+"71","GUY","Guyana",100,100
+"72","HND","Honduras",80,80
+"73","HRV","Croatia",80,80
+"74","HTI","Haiti",60,60
+"75","HUN","Hungary",73.3333333333333,80
+"76","IDN","Indonesia",73.3333333333333,80
+"77","IND","India",60,60
+"78","IRL","Ireland",60,60
+"79","IRN","Iran (Islamic Republic of)",70,70
+"80","IRQ","Iraq",100,100
+"81","ISL","Iceland",80,80
+"82","ISR","Israel",80,80
+"83","ITA","Italy",100,100
+"84","JAM","Jamaica",86.6666666666667,80
+"85","JOR","Jordan",60,60
+"86","JPN","Japan",100,100
+"87","KAZ","Kazakhstan",80,80
+"88","KEN","Kenya",60,60
+"89","KGZ","Kyrgyzstan",80,80
+"90","KHM","Cambodia",60,60
+"91","KIR","Kiribati",50,50
+"92","KNA","Saint Kitts and Nevis",60,60
+"93","KOR","Republic of Korea",100,100
+"94","KWT","Kuwait",53.3333333333333,60
+"95","LAO","Lao People's Democratic Republic",40,40
+"96","LBN","Lebanon",73.3333333333333,80
+"97","LBR","Liberia",66.6666666666667,60
+"98","LBY","Libya",73.3333333333333,80
+"99","LCA","Saint Lucia",80,80
+"100","LIE","Liechtenstein",80,80
+"101","LKA","Sri Lanka",20,20
+"102","LSO","Lesotho",40,40
+"103","LTU","Lithuania",80,80
+"104","LUX","Luxembourg",93.3333333333333,100
+"105","LVA","Latvia",80,80
+"106","MAR","Morocco",80,80
+"107","MCO","Monaco",100,100
+"108","MDA","Republic of Moldova",60,60
+"109","MDG","Madagascar",20,20
+"110","MDV","Maldives",20,20
+"111","MEX","Mexico",66.6666666666667,60
+"112","MHL","Marshall Islands",20,20
+"113","MKD","The former Yugoslav Republic of Macedonia",53.3333333333333,60
+"114","MLI","Mali",80,80
+"115","MLT","Malta",80,80
+"116","MMR","Myanmar",80,80
+"117","MNE","Montenegro",53.3333333333333,60
+"118","MNG","Mongolia",100,100
+"119","MOZ","Mozambique",73.3333333333333,80
+"120","MRT","Mauritania",60,80
+"121","MUS","Mauritius",20,20
+"122","MWI","Malawi",53.3333333333333,60
+"123","MYS","Malaysia",93.3333333333333,100
+"124","NAM","Namibia",73.3333333333333,80
+"125","NER","Niger",40,20
+"126","NGA","Nigeria",60,60
+"127","NIC","Nicaragua",66.6666666666667,60
+"128","NIU","Niue",50,50
+"129","NLD","Netherlands",100,100
+"130","NOR","Norway",100,100
+"131","NPL","Nepal",20,20
+"132","NRU","Nauru",20,20
+"133","NZL","New Zealand",60,60
+"134","OMN","Oman",86.6666666666667,80
+"135","PAK","Pakistan",60,60
+"136","PAN","Panama",80,80
+"137","PER","Peru",73.3333333333333,80
+"138","PHL","Philippines",70,70
+"139","PLW","Palau",20,20
+"140","PNG","Papua New Guinea",20,20
+"141","POL","Poland",100,100
+"142","PRK","Democratic People's Republic of Korea",80,80
+"143","PRT","Portugal",40,40
+"144","PRY","Paraguay",53.3333333333333,60
+"145","QAT","Qatar",100,100
+"146","ROU","Romania",20,20
+"147","RUS","Russian Federation",100,100
+"148","RWA","Rwanda",73.3333333333333,80
+"149","SAU","Saudi Arabia",53.3333333333333,60
+"150","SDN","Sudan",73.3333333333333,80
+"151","SEN","Senegal",60,60
+"152","SGP","Singapore",80,80
+"153","SLB","Solomon Islands",40,40
+"154","SLE","Sierra Leone",40,40
+"155","SLV","El Salvador",100,100
+"156","SMR","San Marino",20,20
+"157","SOM","Somalia",60,60
+"158","SRB","Serbia",80,80
+"159","SSD","South Sudan",33.3333333333333,20
+"160","STP","Sao Tome and Principe",33.3333333333333,20
+"161","SUR","Suriname",66.6666666666667,60
+"162","SVK","Slovakia",53.3333333333333,60
+"163","SVN","Slovenia",90,90
+"164","SWE","Sweden",100,100
+"165","SWZ","Eswatini",33.3333333333333,20
+"166","SYC","Seychelles",73.3333333333333,80
+"167","SYR","Syrian Arab Republic",66.6666666666667,60
+"168","TCD","Chad",33.3333333333333,40
+"169","TGO","Togo",53.3333333333333,60
+"170","THA","Thailand",100,100
+"171","TJK","Tajikistan",70,70
+"172","TKM","Turkmenistan",93.3333333333333,100
+"173","TLS","Timor-Leste",26.6666666666667,20
+"174","TON","Tonga",20,20
+"175","TTO","Trinidad and Tobago",20,20
+"176","TUN","Tunisia",93.3333333333333,100
+"177","TUR","Türkiye",86.6666666666667,80
+"178","TUV","Tuvalu",20,20
+"179","TZA","United Republic of Tanzania",60,60
+"180","UGA","Uganda",53.3333333333333,60
+"181","UKR","Ukraine",73.3333333333333,80
+"182","URY","Uruguay",80,80
+"183","USA","United States of America",80,80
+"184","UZB","Uzbekistan",66.6666666666667,60
+"185","VCT","Saint Vincent and the Grenadines",40,40
+"186","VEN","Venezuela (Bolivarian Republic of)",73.3333333333333,80
+"187","VNM","Viet Nam",60,60
+"188","VUT","Vanuatu",20,20
+"189","WSM","Samoa",20,20
+"190","YEM","Yemen",80,80
+"191","ZAF","South Africa",73.3333333333333,60
+"192","ZMB","Zambia",40,40
+"193","ZWE","Zimbabwe",73.3333333333333,80
