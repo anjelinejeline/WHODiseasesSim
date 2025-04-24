@@ -29,7 +29,7 @@ It assumes that the results will be saved in a folder called Output and relative
 
 ## Files
 
-The **Scripts** folder contains all R scripts, while the **Input** folder holds the data files sourced by these scripts. Please note that the scripts are applied to a simulated dataset, and the results will differ from those presented in the manuscript.
+The *Scripts* folder contains all R scripts, while the *Input* folder holds the data files sourced by these scripts. Please note that the scripts are applied to a simulated dataset, and the results will differ from those presented in the manuscript.
 
 **Important notes**:
 
@@ -45,47 +45,47 @@ Contains data used as input for the project
 
 #### Drivers
 
-Covariates and raster template for predictions.\
+Covariates and raster template for predictions.
 
--   `aridityIndex.tif`: Aridity index raster.\
+-   `aridityIndex.tif`: Aridity index raster.
 -   `covariates_30km_gridded.csv`: Covariates data at 30km grid resolution.
 
 #### Outbreaks
 
-Outbreak data and subsets.\
+Outbreak data and subsets.
 
 -   `GIDEONSample.csv`: Sample outbreak data from GIDEON. 
 -   `Subsets`: Directory for storing subsets of outbreak data.
 
 #### Resilience
 
-Data related to zoonotic events and human-animal health interface.\
+Data related to zoonotic events and human-animal health interface.
 
--   `IHC3.dbf`, `IHC3.prj`, `IHC3.shp`, `IHC3.shx`: Shapefile components for IHC3 data.\
--   `IHR_C3_summary.csv`: Summary of IHR C3 data.\
+-   `IHC3.dbf`, `IHC3.prj`, `IHC3.shp`, `IHC3.shx`: Shapefile components for IHC3 data.
+-   `IHR_C3_summary.csv`: Summary of IHR C3 data.
 -   `IHR_C3.xlsx`: IHR C3 data downloaded from the [Global Health Observatory](https://www.who.int/data/gho).
 
 #### World_Countries
 
 Shapefile and ISO codes for world countries and regions.
 
--   `ISO-3166-Countries-with-Regional-Codes.csv`: ISO codes for countries and regions.\
+-   `ISO-3166-Countries-with-Regional-Codes.csv`: ISO codes for countries and regions.
 -   `World_union.dbf`, `World_union.prj`, `World_union.shp`, `World_union.shx`: Shapefile components for world countries.
 
 ### Scripts
 
 Contains R scripts for running the project.
 
--   `00_Run_all.R`: Script to run all other scripts in sequence.\
--   `01_Load_packages.R`: Script to load required R packages.\
--   `02_Functions.R`: Script containing custom functions.\
--   `03_SimulateOutbreaks.R`: Script to simulate outbreaks.\
--   `04_Subsets_Outbreaks.R`: Script to create subsets of outbreak data.\
--   `05_Models.R`: Script to run models.\
--   `06_Models_correction.R`: Script to correct models.\
--   `07_Predictions.R`: Script to make predictions.\
--   `08_MarginalEffects.R`: Script to calculate marginal effects.\
--   `09_VisResults.R`: Script to visualise the results.\
+-   `00_Run_all.R`: Script to run all other scripts in sequence.
+-   `01_Load_packages.R`: Script to load required R packages.
+-   `02_Functions.R`: Script containing custom functions.
+-   `03_SimulateOutbreaks.R`: Script to simulate outbreaks.
+-   `04_Subsets_Outbreaks.R`: Script to create subsets of outbreak data.
+-   `05_Models.R`: Script to run models.
+-   `06_Models_correction.R`: Script to correct models.
+-   `07_Predictions.R`: Script to make predictions.
+-   `08_MarginalEffects.R`: Script to calculate marginal effects.
+-   `09_VisResults.R`: Script to visualise the results.
 -   `Extra_GIDEON.Rmd`: Additional Rmd file to show GIDEON data.
 
 ```         
