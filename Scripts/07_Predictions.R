@@ -11,27 +11,27 @@
 set.seed(123)
 
 # Load the necessary libraries
-source("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Scripts/01_Load_packages.R")
+source("Scripts/01_Load_packages.R")
 
 # Load the custom functions
-source("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Scripts/02_Functions.R")
+source("Scripts/02_Functions.R")
 
 # Load the models
 models_notraveltime_list <- list.files(
-  path = '/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Models_correction/Models_notraveltime', 
+  path = 'Output/Models_correction/Models_notraveltime', 
   full.names = TRUE
 )
 
 models_onlytraveltime_list <- list.files(
-  path = '/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Models_correction/Models_onlytraveltime', 
+  path = 'Output/Models_correction/Models_onlytraveltime', 
   full.names = TRUE
 )
 
 # Load the raster template
-raster_template <- rast("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/Drivers/aridityIndex.tif")
+raster_template <- rast("Input/Drivers/aridityIndex.tif")
 
 # Load the gridded data
-data <- read.csv("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/Outbreaks/dataSim_30km_gridded.csv")
+data <- read.csv("Input/Outbreaks/dataSim_30km_gridded.csv")
 
 # Make predictions without the travel time to healthcare facilities
 walk(
@@ -41,7 +41,7 @@ walk(
     mod_BARTs <- readRDS(x)
     
     # Extract the model name
-    model_name <- gsub("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Models_correction/Models_notraveltime/mod_BARTs_","", x)
+    model_name <- gsub("Output/Models_correction/Models_notraveltime/mod_BARTs_","", x)
     model_name <- gsub(".RDS","", model_name)
     
     # Predict using the predict_BARTs function
@@ -68,7 +68,7 @@ walk(
     mean_predictions <- BART_P[[1]]
     writeRaster(
       mean_predictions, 
-      filename = glue("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Predictions/Predictions_notraveltime/mean_predictions_{model_name}.tif"),
+      filename = glue("Output/Predictions/Predictions_notraveltime/mean_predictions_{model_name}.tif"),
       filetype = "GTiff"
     )
     
@@ -76,7 +76,7 @@ walk(
     uncertainty_sd <- BART_P[[4]]
     writeRaster(
       uncertainty_sd, 
-      filename = glue("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Predictions/Uncertainty_SD_notraveltime/uncertainty_sd_{model_name}.tif"),
+      filename = glue("Output/Predictions/Uncertainty_SD_notraveltime/uncertainty_sd_{model_name}.tif"),
       filetype = "GTiff"
     )
   }, 
@@ -91,7 +91,7 @@ walk(
     mod_BARTs <- readRDS(x)
     
     # Extract the model name
-    model_name <- gsub("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Models_correction/Models_onlytraveltime/mod_BARTs_","", x)
+    model_name <- gsub("Output/Models_correction/Models_onlytraveltime/mod_BARTs_","", x)
     model_name <- gsub(".RDS","", model_name)
     
     # Predict using the predict_BARTs function
@@ -108,7 +108,7 @@ walk(
     mean_predictions <- BART_P[[1]]
     writeRaster(
       mean_predictions, 
-      filename = glue("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Predictions/Predictions_onlytraveltime/mean_predictions_{model_name}.tif"),
+      filename = glue("Output/Predictions/Predictions_onlytraveltime/mean_predictions_{model_name}.tif"),
       filetype = "GTiff"
     )
     
@@ -116,7 +116,7 @@ walk(
     uncertainty_sd <- BART_P[[4]]
     writeRaster(
       uncertainty_sd, 
-      filename = glue("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Predictions/Uncertainty_SD_onlytraveltime/uncertainty_sd_{model_name}.tif"),
+      filename = glue("Output/Predictions/Uncertainty_SD_onlytraveltime/uncertainty_sd_{model_name}.tif"),
       filetype = "GTiff"
     )
   }, 

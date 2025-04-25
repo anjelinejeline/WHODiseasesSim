@@ -11,7 +11,7 @@
 set.seed(123)
 
 # Load the required libraries
-source("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Scripts/01_Load_packages.R")
+source("Scripts/01_Load_packages.R")
 
 # Create the subsets
 random_numbers <- sample(1:10000, 10, replace = FALSE)
@@ -23,7 +23,7 @@ walk2(
   subsets_n, 
   function(x, y) {
     # Load the data
-    data <- read.csv("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/Outbreaks/dataSim_30km_gridded.csv")
+    data <- read.csv("Input/Outbreaks/dataSim_30km_gridded.csv")
     
     # Select the presence points
     data_pres <- data |> 
@@ -50,7 +50,7 @@ walk2(
     # Save the subset
     saveRDS(
       data, 
-      glue("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/Outbreaks/Subsets/data_{y}.RDS")
+      glue("Input/Outbreaks/Subsets/data_{y}.RDS")
     )
   }
 )

@@ -11,10 +11,10 @@ This script showcases a sample of GIDEON outbreaks. The dataset used in this exa
 
 ```{r, message=FALSE}
 # Load the required libraries
-source("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Scripts/01_Load_packages.R")
+source("Scripts/01_Load_packages.R")
 
 # Load the GIDEON data
-data <- read.csv("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/Outbreaks/GIDEONSample.csv")
+data <- read.csv("Input/Outbreaks/GIDEONSample.csv")
 
 # Display column names
 colnames(data)

@@ -11,14 +11,14 @@
 set.seed(123)
 
 # Load the required libraries
-source("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Scripts/01_Load_packages.R")
+source("Scripts/01_Load_packages.R")
 
 # Load the custom functions
-source("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Scripts/02_Functions.R")
+source("Scripts/02_Functions.R")
 
 # Load the subset data
 data_list <- list.files(
-  "/eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/Outbreaks/Subsets", 
+  "Input/Outbreaks/Subsets", 
   full.names = TRUE
 )
 
@@ -45,7 +45,7 @@ walk(
       ntree = 200, 
       ndpost = 1000, 
       nskip = 100,
-      output_path = "/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Models"
+      output_path = "Output/Models"
     )
   }, 
   .progress = TRUE

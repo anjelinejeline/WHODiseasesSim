@@ -8,31 +8,31 @@
 ##########################################################################################################################################
 
 # Load required libraries
-source("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Scripts/01_Load_packages.R")
+source("Scripts/01_Load_packages.R")
 
 # Load custom functions
-source("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Scripts/02_Functions.R")
+source("Scripts/02_Functions.R")
 
 # Load the data
 # Mean predictions across models without travel time to healthcare facilities
-mean_pred <- list.files("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Predictions/Predictions_notraveltime/", full.names = TRUE) |>
+mean_pred <- list.files("Output/Predictions/Predictions_notraveltime/", full.names = TRUE) |>
   map(\(x) rast(x))
 
 # Mean predictions across models with only travel time to healthcare facilities as a proxy for detection bias
-mean_pred_detection <- list.files("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Predictions/Predictions_onlytraveltime/", full.names = TRUE) |>
+mean_pred_detection <- list.files("Output/Predictions/Predictions_onlytraveltime/", full.names = TRUE) |>
   map(\(x) rast(x))
 
 # World shapefile
-World <- st_read("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/World_Countries/World_union.shp")
+World <- st_read("Input/World_Countries/World_union.shp")
 
 # Regional codes
-regionalcodes <- read.csv("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/World_Countries/ISO-3166-Countries-with-Regional-Codes.csv")
+regionalcodes <- read.csv("Input/World_Countries/ISO-3166-Countries-with-Regional-Codes.csv")
 
 # Import the shapefile containing the IHC3 information
 # This shapefile contains a column called mean_perc which is the average IHC3 per each country across the period of their reporting
-# The raw file from which this was derived can be found in /eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/Resilience/IHR_C3.xlsx
+# The raw file from which this was derived can be found in Input/Resilience/IHR_C3.xlsx
 # or downloaded from https://www.who.int/data/gho/data/indicators/indicator-details/GHO/zoonotic-events-and-the-human-animal-interface
-World_countries_ihc3 <- st_read("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/Resilience/IHC3.shp")
+World_countries_ihc3 <- st_read("Input/Resilience/IHC3.shp")
 World_countries_ihc3 <- World_countries_ihc3 |>
   st_transform("+proj=moll +lon_0=0 +x_0=0 +y_0=0")
 
@@ -51,7 +51,7 @@ covariates <- c(
 )
 
 covariates |>
-  walk(\(x) bind_marginal_effects(file_path = "/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/MarginalEffects",
+  walk(\(x) bind_marginal_effects(file_path = "Output/MarginalEffects",
                                  covariates = x, nrow = 102508, nmodels = 10))
 
 # FIGURE 1: TRUE RISK MAP (FACTORING OUT DETECTION BIAS)----

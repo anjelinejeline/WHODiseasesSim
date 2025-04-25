@@ -11,10 +11,10 @@
 set.seed(123)
 
 # Load required libraries
-source("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Scripts/01_Load_packages.R")
+source("Scripts/01_Load_packages.R")
 
 # Load the data
-data <- read.csv("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Input/Outbreaks/dataSim_30km_gridded.csv")
+data <- read.csv("Input/Outbreaks/dataSim_30km_gridded.csv")
 
 # Define the covariate columns
 covariates <- c(
@@ -38,7 +38,7 @@ n_chunks <- ceiling(nrow(data) / 100)
 chunks_list <- split(data, gl(n_chunks, 100, nrow(data)))
 
 # Load the models
-mod_all <- list.files("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Models", full.names = TRUE)
+mod_all <- list.files("Output/Models", full.names = TRUE)
 
 # Loop over models and covariates
 for (i in seq_along(mod_all)) {
@@ -47,7 +47,7 @@ for (i in seq_along(mod_all)) {
   mod_BARTs <- readRDS(model)
   
   # Extract the subset information
-  n <- gsub("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/Models/mod_BARTs_", "", model)
+  n <- gsub("Output/Models/mod_BARTs_", "", model)
   n <- gsub(".RDS", "", n)
   
   # Loop over covariates
@@ -81,7 +81,7 @@ for (i in seq_along(mod_all)) {
     
     # Save the results to a CSV file
     write.csv(parallel_results, 
-              glue("/eos/jeodpp/data/projects/APES/WHODiseasesSim/Output/MarginalEffects/MarginalEffect_{covariate}_{n}.csv"), 
+              glue("Output/MarginalEffects/MarginalEffect_{covariate}_{n}.csv"), 
               row.names = FALSE)
   }
 }
