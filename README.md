@@ -61,7 +61,7 @@ Outbreak data and subsets.
 
 Data related to zoonotic events and human-animal health interface.
 
--   `IHC3.dbf`, `IHC3.prj`, `IHC3.shp`, `IHC3.shx`: Shapefile components for IHC3 data.
+-   `IHRC3.dbf`, `IHRC3.prj`, `IHRC3.shp`, `IHRC3.shx`: Shapefile components for IHR C3 data.
 -   `IHR_C3_summary.csv`: Summary of IHR C3 data.
 -   `IHR_C3.xlsx`: IHR C3 data downloaded from the [Global Health Observatory](https://www.who.int/data/gho).
 

@@ -29,11 +29,11 @@ World <- st_read("Input/World_Countries/World_union.shp")
 regionalcodes <- read.csv("Input/World_Countries/ISO-3166-Countries-with-Regional-Codes.csv")
 
 # Import the shapefile containing the IHC3 information
-# This shapefile contains a column called mean_perc which is the average IHC3 per each country across the period of their reporting
+# This shapefile contains a column called mean_perc which is the average IHRC3 per each country across the period of their reporting
 # The raw file from which this was derived can be found in Input/Resilience/IHR_C3.xlsx
 # or downloaded from https://www.who.int/data/gho/data/indicators/indicator-details/GHO/zoonotic-events-and-the-human-animal-interface
-World_countries_ihc3 <- st_read("Input/Resilience/IHC3.shp")
-World_countries_ihc3 <- World_countries_ihc3 |>
+World_countries_ihrc3 <- st_read("Input/Resilience/IHRC3.shp")
+World_countries_ihrc3 <- World_countries_ihrc3 |>
   st_transform("+proj=moll +lon_0=0 +x_0=0 +y_0=0")
 
 # Create data frames for marginal effects
@@ -151,7 +151,7 @@ print(time_to_healthcare_plot)
 
 # FIGURE 3 MAXIMUM OUTBREAK RISK-EPIDEMIC RISK INDEX MATRIX ----
 # Extract maximum risk per country
-max_risk <- terra::extract(true_risk_rescaled, World_countries_ihc3, bind = TRUE, fun = "max", na.rm = TRUE)
+max_risk <- terra::extract(true_risk_rescaled, World_countries_ihrc3, bind = TRUE, fun = "max", na.rm = TRUE)
 
 max_risk <- max_risk |>
   sf::st_as_sf() |>
