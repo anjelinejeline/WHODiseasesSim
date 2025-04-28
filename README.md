@@ -25,7 +25,7 @@ The repository is divided as follows:
 -   Input
 -   Scripts
 
-It assumes that the results will be saved in a folder called Output and relative subfolder
+It assumes that the results will be saved in a folder called Output and relative subfolders.
 
 ## Files
 
