@@ -41,7 +41,7 @@ A detailed description is provided below.
 
 ### Input
 
-Contains data used as input for the project
+Contains data used as input for the project.
 
 #### Drivers
 
