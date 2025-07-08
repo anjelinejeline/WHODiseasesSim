@@ -11,13 +11,13 @@
 source("Scripts/01_Load_packages.R")
 
 # Define the scripts
-scripts<-list.files(path="Scripts",
+scripts <- list.files(path="Scripts",
                      pattern=".R",
                      recursive = TRUE,
                      full.names = TRUE)
   
 # Exclude the first scripts containing the functions and packages sourced where appropriate in each individual script and the script to visualise the results
-scripts<-scripts[-c(1:3,10)]
+scripts <- scripts[-c(1:3,10)]
 
 
 print(scripts)
