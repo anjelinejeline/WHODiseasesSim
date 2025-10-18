@@ -1,4 +1,4 @@
-# Code and data to accompany "Assessing the risk of diseases with epidemic and pandemic potential in a changing world"
+# Code and data to accompany the article "Assessing the risk of diseases with epidemic and pandemic potential in a changing world"
 
 ## Authors
 
@@ -14,11 +14,13 @@ Ilaria Capua ([ORCID](https://orcid.org/0000-0002-7072-2581))\
 Wojtek Szewczyk\
 Emanuele Massaro ([ORCID](https://orcid.org/0000-0002-9287-3743))
 
+Cite as: Angela Fanelli et al. ,Assessing the risk of diseases with epidemic and pandemic potential in a changing world.Sci. Adv.11,eadw6363(2025).DOI:10.1126/sciadv.adw6363
+
 Contact information: [Angela.FANELLI\@ec.europa.eu](Angela.FANELLI@ec.europa.eu)
 
 ## Description
 
-This repository contains the data and code used to assess the risk of diseases with epidemic and pandemic potential, as described in the paper *Assessing the risk of diseases with epidemic and pandemic potential in a changing world*.
+This repository contains the data and code used to assess the risk of diseases with epidemic and pandemic potential, as described in the article [*Assessing the risk of diseases with epidemic and pandemic potential in a changing world*](https://www.science.org/doi/10.1126/sciadv.adw6363).
 
 The repository is divided as follows:
 
